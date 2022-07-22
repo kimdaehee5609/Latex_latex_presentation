@@ -1,0 +1,2624 @@
+%	-------------------------------------------------------------------------------
+%
+%
+%
+%
+%
+%
+%
+%
+%	-------------------------------------------------------------------------------
+
+%	\documentclass[10pt,xcolor=pdftex,dvipsnames,table]{beamer}
+%	16:10
+%	\documentclass[ aspectratio=1610, 10pt,blue,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+%	\documentclass[ aspectratio=1610, 10pt,blue,xcolor=pdftex,dvipsnames,table,handout,notes]{beamer}
+%	16:9 
+%	\documentclass[ aspectratio=169,  10pt,blue,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+%	\documentclass[ aspectratio=169,  10pt,blue,xcolor=pdftex,dvipsnames,table,handout,notes]{beamer}
+%	14:9 
+%	\documentclass[ aspectratio=149,  10pt,blue,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+	\documentclass[ aspectratio=149,  14pt,blue,xcolor=pdftex,dvipsnames,table,handout,notes]{beamer}
+
+%	5:4
+%	\documentclass[ aspectratio=54,   10pt,blue,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+%	4:3 default
+%	\documentclass[ aspectratio=43, 10pt,blue,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+%	3:2 
+% 	\documentclass[ aspectratio=32, 10pt,blue,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+		
+		% Font Size
+		%	default font size : 11 pt
+		%	8,9,10,11,12,14,17,20
+		%
+		% 	put frame titles 
+		% 		1) 	slideatop
+		%		2) 	slide centered
+		%
+		%	navigation bar
+		% 		1)	compress
+		%		2)	uncompressed
+		%
+		%	Color
+		%		1) blue
+		%		2) red
+		%		3) brown
+		%		4) black and white	
+		%
+		%	Output
+		%		1)  	[default]	
+		%		2)	[handout]		for PDF handouts
+		%		3) 	[trans]		for PDF transparency
+		%		4)	[notes=hide/show/only]
+
+		%	Text and Math Font
+		% 		1)	[sans]
+		% 		2)	[sefif]
+		%		3) 	[mathsans]
+		%		4)	[mathserif]
+
+
+		%	---------------------------------------------------------	
+		%	슬라이드 크기 설정 ( 128mm X 96mm )
+		%	---------------------------------------------------------	
+			\setbeamersize{text margin left=10mm}
+			\setbeamersize{text margin right=10mm}
+
+%			% Format presentation size to A4
+%			\usepackage[size=a4]{beamerposter}		% A4용지 크기 사용
+
+%			% Format presentation size to A4
+%			\setlength{\paperwidth}{297mm}
+%			\setlength{\paperheight}{210mm}
+%			\setlength{\textwidth}{287mm}
+%			\setlength{\textheight}{200mm}   
+
+%			% Format presentation size to A4 길게
+			\setlength{\paperwidth}	{210mm}
+			\setlength{\paperheight}	{297mm}
+			\setlength{\textwidth}		{190mm}
+			\setlength{\textheight}	{287mm}   
+
+
+	%	========================================================== 	Package
+		\usepackage{kotex}						% 한글 사용
+		\usepackage{amssymb,amsfonts,amsmath}	% 수학 수식 사용
+		\usepackage{color}						%
+		\usepackage{colortbl}					%
+
+
+
+		%	---------------------------------------------------------	
+		%		특수문자 입력용
+		%	---------------------------------------------------------	
+			\usepackage{textcomp}
+			\usepackage{gensymb}
+			\usepackage{marvosym} 	% 구조계산 그림용
+
+
+		%	---------------------------------------------------------	
+		%		Table
+		%	---------------------------------------------------------	
+			\usepackage{booktabs}			% toprule cmidrule midrule bottomrule  
+			\usepackage{longtable}			%
+			\usepackage{tabularx}			%
+			\usepackage{array}				%
+			\usepackage{bigstrut}			%
+
+
+		%	---------------------------------------------------------	
+		%		Box
+		%	---------------------------------------------------------	
+			\usepackage{adjustbox}
+
+		
+		%	---------------------------------------------------------	
+		%		유인물 출력 : 출력할대 조정해서 출력 할것
+		%	---------------------------------------------------------	
+
+			\usepackage{pgfpages}
+%			\pgfpagesuselayout{2 on 1}[letterpaper]
+%			\pgfpagesuselayout{4 on 1}[letterpaper]
+%			\pgfpagesuselayout{8 on 1}[letterpaper]
+
+%			\pgfpagesuselayout{resize to}[a4paper,landscape,border shrink=5mm]
+			\pgfpagesuselayout{resize to}[a4paper,border shrink=5mm]
+%			\pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
+%			----------------------------------------------------- 출력 시 설정	1
+%			\pgfpagesuselayout{2 on 1}[a4paper]
+%			\usecolortheme{seagull}	% 휜색
+%			----------------------------------------------------- 출력 시 설정	2
+%			\pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]%
+%			\usecolortheme{dove}
+%			----------------------------------------------------- 
+%			\pgfpagesuselayout{4 on 1}[a4paper,border shrink=5mm]
+%			\pgfpagesuselayout{8 on 1}[a4paper,border shrink=5mm]
+
+			\usepackage{handoutWithNotes}
+%			\pgfpagesuselayout{1 on 1 with notes}[a4paper,border shrink=5mm]
+%			\pgfpagesuselayout{2 on 1 with notes}[a4paper,border shrink=5mm]
+%			\pgfpagesuselayout{3 on 1 with notes}[a4paper,border shrink=5mm]
+%			\pgfpagesuselayout{4 on 1 with notes}[a4paper,border shrink=5mm]
+
+%			\pgfpagesuselayout{2 on 1}[letterpaper]
+%			\pgfpagesuselayout{2 on 1}[letterpaper]
+%			\pgfpagesuselayout{2 on 1}[letterpaper]
+
+
+
+	%		========================================================= 	Theme
+
+		%	---------------------------------------------------------	
+		%	전체 테마
+		%	---------------------------------------------------------	
+		%	테마 명명의 관례 : 도시 이름
+%			\usetheme{default}			%
+%			\usetheme{Madrid}    		%
+%			\usetheme{CambridgeUS}    	% -red, no navigation bar
+			\usetheme{Antibes}			% -blueish, tree-like navigation bar
+
+		%	----------------- table of contents in sidebar
+%			\usetheme{Berkeley}		% -blueish, table of contents in sidebar
+									% 개인적으로 마음에 듬
+
+%			\usetheme{Marburg}			% - sidebar on the right
+%			\usetheme{Hannover}		% 왼쪽에 마크
+%			\usetheme{Berlin}			% - navigation bar in the headline
+%			\usetheme{Szeged}			% - navigation bar in the headline, horizontal lines
+%			\usetheme{Malmoe}			% - section/subsection in the headline
+
+%			\usetheme{Singapore}
+%			\usetheme{Amsterdam}
+
+		%	---------------------------------------------------------	
+		%	색 테마
+		%	---------------------------------------------------------	
+%			\usecolortheme{albatross}	% 바탕 파란
+%			\usecolortheme{crane}		% 바탕 흰색
+%			\usecolortheme{beetle}		% 바탕 회색
+%			\usecolortheme{dove}		% 전체적으로 흰색
+%			\usecolortheme{fly}		% 전체적으로 회색
+%			\usecolortheme{seagull}	% 휜색
+%			\usecolortheme{wolverine}	& 제목이 노란색
+%			\usecolortheme{beaver}
+
+		%	---------------------------------------------------------	
+		%	Inner Color Theme 			내부 색 테마 ( 블록의 색 )
+		%	---------------------------------------------------------	
+
+%			\usecolortheme{rose}		% 흰색
+%			\usecolortheme{lily}		% 색 안 칠한다
+%			\usecolortheme{orchid} 	% 진하게
+
+		%	---------------------------------------------------------	
+		%	Outter Color Theme 		외부 색 테마 ( 머리말, 고리말, 사이드바 )
+		%	---------------------------------------------------------	
+
+%			\usecolortheme{whale}		% 진하다
+%			\usecolortheme{dolphin}	% 중간
+%			\usecolortheme{seahorse}	% 연하다
+
+		%	---------------------------------------------------------	
+		%	Font Theme 				폰트 테마
+		%	---------------------------------------------------------	
+%			\usfonttheme{default}		
+			\usefonttheme{serif}			
+%			\usefonttheme{structurebold}			
+%			\usefonttheme{structureitalicserif}			
+%			\usefonttheme{structuresmallcapsserif}			
+
+
+
+		%	---------------------------------------------------------	
+		%	Inner Theme 				
+		%	---------------------------------------------------------	
+
+%			\useinnertheme{default}
+			\useinnertheme{circles}		% 원문자			
+%			\useinnertheme{rectangles}		% 사각문자			
+%			\useinnertheme{rounded}		% 깨어짐
+%			\useinnertheme{inmargin}			
+
+
+
+
+		%	---------------------------------------------------------	
+		%	이동 단추 삭제
+		%	---------------------------------------------------------	
+%			\setbeamertemplate{navigation symbols}{}
+
+		%	---------------------------------------------------------	
+		%	문서 정보 표시 꼬리말 적용
+		%	---------------------------------------------------------	
+%			\useoutertheme{infolines}
+
+
+			
+	%	---------------------------------------------------------- 	배경이미지 지정
+%			\pgfdeclareimage[width=\paperwidth,height=\paperheight]{bgimage}{./fig/Chrysanthemum.jpg}
+%			\setbeamertemplate{background canvas}{\pgfuseimage{bgimage}}
+
+		%	---------------------------------------------------------	
+		% 	본문 글꼴색 지정
+		%	---------------------------------------------------------	
+%			\setbeamercolor{normal text}{fg=purple}
+%			\setbeamercolor{normal text}{fg=red!80}	% 숫자는 투명도 표시
+
+
+		%	---------------------------------------------------------	
+		%	itemize 모양 설정
+		%	---------------------------------------------------------	
+%			\setbeamertemplate{items}[ball]
+%			\setbeamertemplate{items}[circle]
+%			\setbeamertemplate{items}[rectangle]
+
+
+		%	---------------------------------------------------------	
+		%	상자 모양새 설정
+		%	---------------------------------------------------------	
+%			\setbeamertemplate{blocks}[rounded,shadow=true]
+%			\begin{block}
+%			\begin{theorem}
+%			\begin{lemma}
+%			\begin{proof}
+%			\begin{corollary}
+%			\begin{example}
+%			\begin{exampleblock}
+%			\begin{alertblock}
+
+
+
+
+		\setbeamercovered{dynamic}
+
+
+
+
+
+
+% ------------------------------------------------------------------------------
+% Begin document (Content goes below)
+% ------------------------------------------------------------------------------
+	\begin{document}
+	
+
+			\title{LATEX}
+			\subtitle{사용설명서}
+			\author{김대희}
+			\date[2015.06.30]{2015년 7월}
+			\institute[KTS]{(주)서영엔지니어링 \url{http://symsone.seoyeong.co.kr/}}
+
+
+
+	%	==========================================================
+	%
+	%	----------------------------------------------------------
+		\begin{frame}[plain]
+		\titlepage
+		\end{frame}
+
+
+
+	%	==========================================================
+	%		자주 사용하는 기능들
+	%	----------------------------------------------------------
+
+
+
+	%	----------------------------------------------------------
+	%		미리 정의된 문자열
+	%	----------------------------------------------------------
+		\begin{frame}[t,allowframebreaks]{미리 정의된 문자열}
+
+			\begin{center}
+			\rowcolors{1}{blue!10}{yellow!10}
+			\begin{table}
+			\begin{tabular}{ l l l  }
+				명령어	&사용예	&설명\\
+				\hline
+				\textbackslash today 	&\today 		&현재 사용 언어에서의 현재 날짜 표기\\
+				\textbackslash TeX 	&\TeX 		&최고의 조판 시스템의 이름\\
+				\textbackslash LaTeX 	&\LaTeX 		&지금 우리가 배우고 있는 것의 이름\\
+				\textbackslash LaTeXe 	&\LaTeXe		&LATEX의 최신판\\
+			\end{tabular}
+			\end{table}
+			\end{center}
+
+
+	%	----------------------------------------------------------
+			\begin{columns}[t]
+			\begin{column}{.4\textwidth}
+			\begin{block} {특수문자}
+			\begin{enumerate}
+			\item \# : \textbackslash \# \\
+			\item \$ : \textbackslash \$ \\
+			\item \% : \textbackslash \% \\
+			\item \& : \textbackslash \& \\
+			\item \_ : \textbackslash \_ \\
+			\item \{ : \textbackslash \{ \\
+			\item \} : \textbackslash \} \\
+			\item \textbackslash  : \textbackslash textbackslash
+			\end{enumerate}
+			\end{block}
+			\end{column}
+
+			\begin{column}{.4\textwidth}
+			\begin{block} {특수문자}
+			\begin{enumerate}
+			\item \_ : \textbackslash \_ \\
+			\item \^{} : \textbackslash \^{} \\
+			\item $\sim$ : \$ \textbackslash sim \$
+			\end{enumerate}
+			\end{block}
+			\end{column}
+
+			\end{columns}
+
+	%	----------------------------------------------------------
+
+			\begin{columns}[t]
+			\begin{column}{.4\textwidth}
+			\begin{block} {특수문자 : 수학기호로 처리}
+			\begin{enumerate}
+			\item $\cdot$ 		: \$ $\cdot$ \$ \\
+			\item $\circ$ 		: \$ $\circ$ \$ \\
+			\item $\bullet$ 		: \$ $\bullet$ \$ \\
+			\item $\centerdot$		: \$ $\centerdot$ \$ \\
+			\item $\div$ 			: \$ $\div$ \$ \\
+			\item $\times$ 		: \$ $\times$ \$ \\
+			\end{enumerate}
+			\end{block}
+			\end{column}
+
+			\begin{column}{.4\textwidth}
+			\begin{block} {특수문자}
+%			\begin{enumerate}
+%			\item \approx		:  	\\
+%			\item \neq		: 	\\
+%			\item \infty		: 	\\
+%			\end{enumerate}
+			\end{block}
+			\end{column}
+			\end{columns}
+
+
+			\textcircled{\small}\\
+
+
+		\end{frame}
+
+
+	%	----------------------------------------------------------
+		\begin{frame}[t]{특수문자 : textcomp, gensymb package 사용 }
+
+			\begin{columns}[t]
+			\begin{column}{.4\textwidth}
+					\begin{block} { usepackage textcomp }
+					\begin{enumerate}
+					\item[\textcelsius 		]	\textbackslash textcelsius
+					\item[\textpertenthousand	]	\textbackslash textpertenthousand
+					\item[\textperthousand		]	\textbackslash textperthousand
+					\item[\textreferencemark	]	\textbackslash textreferencemark
+					\end{enumerate}
+					\end{block}
+			\end{column}
+
+			\begin{column}{.4\textwidth}
+					\begin{block} { usepackage gensymb}
+					\end{block}
+
+			\end{column}
+			\end{columns}
+
+		\end{frame}
+
+
+	%	----------------------------------------------------------
+		\begin{frame}[t,shrink=0]{특수문자 : 구조 계산 그림용 package marvosym}
+
+			\begin{columns}[t]
+			\begin{column}{.4\textwidth}
+			\begin{block} { 모델링 }
+			\begin{enumerate}
+			\item[\Beam			]	\textbackslash Beam	
+			\item[\Force			]	\textbackslash Force	
+			\item[\Lineload		]	\textbackslash Lineload	
+			\item[\Lefttorque		]	\textbackslash Lefttorque	
+			\item[\Righttorque		]	\textbackslash Righttorque	
+			\item[\Fixedbearing	]	\textbackslash Fixedbearing	
+			\item[\Bearing		]	\textbackslash Bearing
+			\item[\Loosebearing	]	\textbackslash Loosebearing	
+
+			\item[\Rectpipe		]	\textbackslash Rectpipe
+			\item[\Squarepipe		]	\textbackslash Squarepipe	
+			\item[\Circpipe		]	\textbackslash Circpipe	
+			\end{enumerate}
+			\end{block}
+			\end{column}
+
+			\begin{column}{.4\textwidth}
+			\begin{block} { 단면 }
+			\begin{enumerate}
+			\item[\Circsteel		]	\textbackslash Circsteel	
+			\item[\Octosteel		]	\textbackslash Octosteel	
+			\item[\Hexasteel		]	\textbackslash Hexasteel
+			\item[\Squaresteel		]	\textbackslash Squaresteel	
+			\item[\Rectsteel		]	\textbackslash Rectsteel	
+
+			\item[\Tsteel			]	\textbackslash Tsteel	
+			\item[\RoundedTsteel	]	\textbackslash RoundedTsteel	
+			\item[\TTsteel		]	\textbackslash TTsteel	
+			\item[\RoundedTTsteel	]	\textbackslash RoundedTTsteel
+			\item[\Flatsteel		]	\textbackslash Flatsteel	
+			\item[\Lsteel			]	\textbackslash Lsteel	
+			\item[\RoundedLsteel	]	\textbackslash RoundedLsteel	
+			\end{enumerate}
+			\end{block}
+			\end{column}
+			\end{columns}
+
+
+
+			\begin{block}{structural analysis 사용준비}
+			\begin{itemize}
+			\item[] \textbackslash usepackage\{structuralanalysis\}
+			\item[] \textbackslash usepackage\{3dstructuralanalysis\}
+			\item[] 
+			\item[] \textbackslash begin\{tikzpicture\}
+			\item[] \textbackslash point\{a\}\{0\}\{0\};
+			\item[] \textbackslash beam\{2\}\{a\}\{b\}[0][1];
+			\item[] \textbackslash support\{1\}\{a\}[0];
+			\item[] \textbackslash end\{tikzpicture\}
+			\end{itemize}
+			\end{block}
+
+
+
+
+		\end{frame}
+
+
+
+
+	%	----------------------------------------------------------
+	%		치수
+	%	----------------------------------------------------------
+		\begin{frame}[t]{치수}
+
+			\begin{block} {치수}
+			\begin{description}[12345678901234567890]
+			\item [\textbackslash text width ]
+			\item [\textbackslash text height ]
+			\item [\textbackslash line width ]
+			\item [\textbackslash paper width ]
+			\item [\textbackslash paper height ]
+			\end{description}
+			\end{block}
+
+
+		\end{frame}
+
+
+
+
+	%	----------------------------------------------------------
+	%		선 그리기
+	%	----------------------------------------------------------
+		\begin{frame}[t]{선 그리기}
+
+			\begin{block} {선 그리기}
+			\textbackslash rule \{ \textbackslash linewidth \} \{ 두께 \}
+			\end{block}
+
+			\begin{example}
+			\textbackslash rule \{ 4cm \} \{ 2mm \}
+			\end{example}
+
+			\rule{4cm}{2mm}
+
+		\end{frame}
+
+
+
+
+	%	==========================================================
+	%		글꼴 모양
+	%	----------------------------------------------------------
+
+
+
+	%	----------------------------------------------------------
+	%		글꼴 모양 과 크기
+	%	----------------------------------------------------------
+
+
+		\begin{frame}[t]{글꼴 모양과 크기}
+
+			\begin{columns}[t]
+			\begin{column}{.5\textwidth}
+					\begin{block}{글꼴 모양}
+					\begin{table}
+					\begin{tabular}{ l l l  }
+					명령어	&환경	&결과\\
+					\hline
+					\textbackslash textnarmal 	&textnarmal 	&\textnormal{결과}\\
+					\textbackslash textit 		&itshape		&\textit{결과}\\
+					\textbackslash emph 		&없음		&\emph{결과}\\
+					\textbackslash textbf 		&bfseries		&\textbf{결과}\\
+					\textbackslash underline 	&밑줄		&\underline{결과}\\
+					\end{tabular}
+					\end{table}
+					\end{block}
+			\end{column}
+			\begin{column}{.5\textwidth}
+					\begin{block}{글꼴 크기}
+					\begin{tabular}{ l l l  }
+					명령어		&결과\\
+					\hline
+					\textbackslash tiny			&\tiny{결과}\\
+					\textbackslash scriptsize		&\scriptsize{결과}\\
+					\textbackslash footnotesize		&\footnotesize{결과}\\
+					\textbackslash normalsize		&\normalsize{결과}\\
+					\textbackslash large			&\large{결과}\\
+					\textbackslash Large			&\Large{결과}\\
+					\textbackslash LARGE			&\LARGE{결과}\\
+					\textbackslash huge			&\huge{결과}\\
+					\textbackslash Huge			&\Huge{결과}\\
+					\end{tabular}
+					\end{block}
+			\end{column}
+			\end{columns}
+
+
+		\end{frame}
+
+
+
+
+
+
+	%	==========================================================
+	%		문서 클래스
+	%	----------------------------------------------------------
+
+
+	%	----------------------------------------------------------
+	%		문서 클래스
+	%	----------------------------------------------------------
+		\begin{frame}[t,shrink=00]{문서 클래스}
+
+
+			\begin{block} {장, 절의 설정}
+			\begin{description}[1234567890]
+			\item [article] 과학 학술지, 프리젠테이션, 짧은 보고서, 프로그램 문서, 초대장 등에 쓰이는 아티클용 클래스
+			\item [proc article] 클래스에 기초한 프로시딩을 위한 클래스 
+			\item [minimal] 최소 문서 양식 클래스. 페이지 크기와 기본 글꼴만을 설정한다. 주로 디버깅을 위하여 사용함.
+			\item [report] 여러 장(chapter)으로 이루어진 긴 보고서, 작은 책, 박사학위 논문 등에 쓰이는 클래스.
+			\item [book] 진짜 책을 만들기 위한 클래스.
+			\item [slides] 슬라이드 제작용 클래스. 
+			\end{description}
+			\end{block}
+
+	%	----------------------------------------------------------
+
+			\begin{block} {문서 클래스 옵션}
+			\begin{description}[1234567890]
+			\item [10pt] 11pt, 12pt 문서 기본 글꼴 크기를 설정한다.
+			\item [letterpaper] a4paper,a5paper, b5paper, executivepaper,legalpaper
+			\item [fleqn] 수식을 가운데 정렬이 아닌 왼쪽 정렬로 식자한다.
+			\item [leqno] 수식 번호를 수식의 오른쪽이 아닌 왼쪽에 표시되도록 한다.
+			\item [titlepage] notitlepage 표지 뒤에 새로운 페이지를 시작하도록 할 것인지 지정한다. report와 book은 새 페이지를 만든다.
+			\item [onecolumn] twocolumn 문서를 1단 또는 2단으로 조판하도록 지시한다.
+			\item [twoside] oneside 양면인쇄용 출력물 생성.\\ 단면(article,report) 양면 (book)
+			\item [landscape] 레이아웃을 가로가 긴 형식(landscape)으로 변경한다.
+			\item [openright] openany 새로운 장을 홀수쪽에서 시작.\\
+								book 클래스에서는 홀수쪽에서 시작하는 것이 기본값이다.
+			\end{description}
+			\end{block}
+
+		\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+	%	==========================================================
+	%		패키지
+	%	----------------------------------------------------------
+		\begin{frame}[t]{패키지}
+
+
+			\begin{block} {표 작성 관련 패키지}
+			\begin{description}[12345678901234567890]
+			\item[booktabs]	toprule cmidrule midrule bottomrule  
+			\item[longtable]	
+			\item[tabularx]	
+			\item[array]		
+			\item[bigstrut]	
+			\end{description}
+			\end{block}
+
+
+			\begin{block} {특수문자 입력용}
+			\begin{description}[12345678901234567890]
+			\item[textcomp]
+			\item[gensymb]
+			\item[marvosym] 	 구조계산 그림용
+			\end{description}
+			\end{block}
+
+
+			\begin{block} {한번씩 사용하는 기능들}
+			\begin{description}[12345678901234567890]
+			\item[blindtext] 임의의 문서를 자동 생성한다. 코딩 시 테스트용으로 주로 사용
+			\end{description}
+			\end{block}
+
+			\begin{block} {Page 관련 패키지}
+			\begin{description}[12345678901234567890]
+			\item[afterpage]	 다음페이지가 나온면 어떻게 하라는 명령 정의 패키지
+			\item[fullpage]			
+			\item[pdflscape]	 페이지를 전체 돌린다.	
+			\item[lscape]		그림이나 표등 부분을 돌린다
+			\end{description}
+			\end{block}
+
+		\end{frame}
+
+
+
+	%	==========================================================
+	%		쪽 양식
+	%	----------------------------------------------------------
+		\begin{frame}[t]{쪽양식}
+
+			\begin{block} {latex에서 미리 정의된 쪽양식}
+			\begin{description}[1234567890]
+			\item [\textbf{plain}] 쪽 번호를 쪽의 아래쪽 바닥글에 중앙정렬하여 찍는다.\\
+								쪽 양식의 기본값이다.
+			\item [\textbf{headings}] 현재 장 표제와 쪽 번호를 각 쪽의 머리글에 적는다.\\
+								바닥글은 비운다.
+			\item [\textbf{empty}] 머리글과 바닥글을 모두 비운다.
+			\end{description}
+			\end{block}
+
+
+	%	---------------------------------------------------------- 페이지 칼라
+			\begin{block} {페이지 칼라 변경}
+			\begin{enumerate}
+			\item	\textbackslash usepackage \{xcolor\} 
+			\item	\textbackslash usepackage \{afterpage\}
+			\item	
+			\item	\textbackslash pagecolor \{black\} \textbackslash  afterpage\{ \textbackslash  nopagecolor\{\}\}
+			\item	\textbackslash color\{white\} 글자색 흰색으로
+			\end{enumerate}
+			\end{block}
+
+
+		\end{frame}
+
+
+	%	==========================================================
+	%		장, 절의 설정
+	%	----------------------------------------------------------
+		\begin{frame}[t]{장, 절의 설정}
+
+			\begin{block} {장, 절의 설정}
+			\begin{description}[1234567890]
+			\item[부]		\textbackslash part (-1)
+			\item[장]		\textbackslash chapter (0)
+			\item[절]		\textbackslash section	(1)
+			\item[소절]	\textbackslash sub section	(2)
+			\item[소소절]	\textbackslash sub sub section (3)
+			\item[문단]	\textbackslash paragraph (4)
+			\item[소문단]	\textbackslash sub paragraph (5)
+			\end{description}
+			\end{block}
+
+		\textbackslash setcounter \{ sec num depth \} \{n\} 명령에 의해 장 번호의 설치 깊이를 설정\\
+		n을 2로 설정하면 subsection 까지 번호 부여
+		\end{frame}
+
+
+
+
+	%	==========================================================
+	%		title page
+	%	----------------------------------------------------------
+		\begin{frame}[t,shrink=10]{표지 작성}
+
+
+			\begin{columns}[t]
+			\begin{column}{.4\textwidth}
+					\begin{block} {표지작성}
+					\begin{description}[1234567890]
+					\item [\textbackslash title] 	\{문서 제목\}
+					\item [\textbackslash author]	\{문서 저자\}
+					\item [\textbackslash date] 	\{작성일\}
+					\item []
+					\item [\textbackslash maketitle] 타이틀 표시
+					\end{description}
+					\end{block}
+			\end{column}
+
+			\begin{column}{.6\textwidth}
+					\begin{block} {사용자 정의 : \textbackslash begin\{titlepage\} \textbackslash end \{titlepage\} }
+					\begin{itemize}
+					\item []\textbackslash begin\{titlepage\}
+					\item []\textbackslash begin\{center\}
+					\item []\textbackslash vspace*\{1cm\}  윗부분 여백지정
+					\item []\textbackslash Huge \textbackslash textbf\{보고서 제목\} \textbackslash \textbackslash 
+					\item []\textbackslash vspace\{0.5cm\}
+					\item []\textbackslash Large 보고서 부제목 \textbackslash \textbackslash 
+					\item []\textbackslash vfill
+					\item []\textbackslash Date
+					\item []\textbackslash vfill
+					\item []\textbackslash textbf\{지은이\}\textbackslash \textbackslash 
+					\item []\textbackslash vspace\{1.5cm\}
+					\item []\textbackslash Large Department Name\textbackslash \textbackslash 
+					\item []\textbackslash vspace\{2.0cm\}  아래부분 여백 정의
+					\item []\textbackslash end \{center\}
+					\item []\textbackslash end \{titlepage\}
+					\end{itemize}
+					\end{block}
+			\end{column}
+			\end{columns}
+
+
+
+		표지의 표시 순서 변경 방법
+		\end{frame}
+
+%				%	----------------------------------------------------
+%				%	문서 표지 페이지
+%				%	----------------------------------------------------
+%					\begin{titlepage}
+%					\begin{center}
+%					\vspace*{1cm}  %	----------------- 윗부분 여백지정
+%					\rule{1.0\textwidth} {0.1mm}
+%					\Huge \textbf{보고서 제목} 
+%					\par
+%					\rule{1.0\textwidth} {0.1mm}
+%					\vspace{0.5cm}
+%					\Large 보고서 부제목 
+%					\par
+%					\vfill
+%					\Date{\today}
+%					\vfill
+%					\textbf{지은이}
+%					\par
+%					\vspace{1.5cm}
+%					\Large Department Name
+%					\par
+%					\vspace{2.0cm}  %	----------------- 아래부분 여백 정의
+%					\end{center}
+%					\end{titlepage}
+%				%	----------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	%	==========================================================
+	%		초록 작성
+	%	----------------------------------------------------------
+		\begin{frame}[t]{초록 작성}
+
+			\begin{block} {초록 작성}
+			\begin{description}[12345678901234567]
+			\item [\textbackslash begin\{abstract\}] 	문서 제목
+			\item [초록 내용]						초록 내용
+			\item [\textbackslash end\{abstract\}] 	작성일
+			\end{description}
+			\end{block}
+
+
+		\end{frame}
+
+
+
+
+	%	==========================================================
+	%		목차 작성
+	%	----------------------------------------------------------
+		\begin{frame}[t]{목차 작성}
+
+			\begin{block} {목차 작성}
+			\begin{description}[12345678901234567890]
+			\item [\textbf{\textbackslash table of contents}] 	문서 내용 목차
+			\item [\textbf{\textbackslash list of figures}]		그림 목차
+			\item [\textbf{\textbackslash list of tables}] 		표 목차
+			\end{description}
+			\end{block}
+
+			\begin{block} {목차 표지 범위 설정}
+			\textbackslash setcounter \{ tocdepth \} 
+			\end{block}
+
+			\begin{block} {목차에서 페이지 나누기}
+			\textbackslash addtocontents \{ toc \} \{ \textbackslash protect \textbackslash newpage \}
+			\end{block}
+
+			\begin{block} {번호 설정 깊이 }
+			\textbackslash setcounter \{ secnumdepth \} \{ n \} 
+			\end{block}
+
+			\begin{tabular}{ l l }
+				\hline
+				부(part)				&-1\\
+				장(chapter)			&0\\
+				절(section)			&1\\
+				소절(subsection)		&2\\
+				소소절(subsubsection)	&3\\
+				문단(paragraph)		&4\\
+				소문단(subparagraph)	&5\\
+				\hline
+			\end{tabular}
+
+		\end{frame}
+
+
+
+	%	==========================================================
+	%		주석문 처리
+	%	----------------------------------------------------------
+
+		\begin{frame}[t]{주석문 처리}
+
+			\begin{block} {주석문 처리}
+			\textbackslash \%
+			\end{block}
+
+		\end{frame}
+
+
+	%	----------------------------------------------------------
+	%		각주, 난외주
+	%	----------------------------------------------------------
+
+		\begin{frame}[t]{각주, 난외주}
+
+			\begin{block} {각주}
+			\textbackslash footnote \{ 각주 내용 \}
+			\end{block}
+
+			\begin{block} {난외주}
+			\textbackslash marginpar \{ 난외주 내용 \}
+			\end{block}
+
+
+		\end{frame}
+
+
+
+	%	----------------------------------------------------------
+	%		인용문
+	%	----------------------------------------------------------
+
+		\begin{frame}[t]{인용문}
+
+			\begin{block} {인용문}
+			\begin{itemize}
+			\item[]	\textbackslash begin \{ quote \} ~인용문 내용 \textbackslash end \{ quote \} \\
+			\item[]	\textbackslash begin \{ quotation \} ~인용문 내용 \textbackslash end \{ quotation \} 
+			\end{itemize}
+			\end{block}
+
+			\begin{example}
+				\begin{quote} 인용문 내용 \end{quote} 
+				\begin{quotation} 인용문 내용 \end{quotation}
+			\end{example}
+
+
+		\end{frame}
+
+
+
+
+
+	%	----------------------------------------------------------
+	%		 상호 참조
+	%	----------------------------------------------------------
+
+		\begin{frame}[t]{상호참조}
+
+			\begin{block} {상호참조}
+				\begin{itemize}
+				\item \textbackslash label \{참조 기호 \}
+				\item \textbackslash ref \{참조할 기호 \}
+				\item \textbackslash pageref \{참조할 기호 \}
+				\end{itemize}
+			\end{block}
+
+		\end{frame}
+
+
+	%	----------------------------------------------------------
+	%		하이퍼링크
+	%	----------------------------------------------------------
+
+		\begin{frame}[t]{하이퍼링크}
+
+			\begin{block} {하이퍼링크}
+				\begin{itemize}
+				\item [] \textbackslash  url\{하이퍼링크\}																\end{itemize}
+			\end{block}
+
+			\begin{example}
+				\begin{itemize}
+				\item \textbackslash url\{http://www.band.us/\#/band/53125310\} 
+				\item \textbackslash url\{http://www.seoyeong.co.kr/\}
+				\item \textbackslash url\{http://symsone.seoyeong.co.kr\}
+				\item \textbackslash url\{http://syerp.seoyeong.co.kr/\}						
+				\end{itemize}
+			\end{example}
+
+				\url{http://www.seoyeong.co.kr/}
+
+		\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	%	==========================================================
+	%		Chapter styles : FncyChap package
+	%	----------------------------------------------------------
+		\begin{frame}[t]{Chapter styles : FncyChap package}
+
+%		\setbeamercolor{block title}	{use=structure,fg=white,bg=purple!75!black}
+		\setbeamercolor{block title}	{use=structure,fg=black,bg=white!20!white}
+		\setbeamercolor{block body}		{use=structure,fg=black,bg=white!20!white}
+
+
+		\begin{block}{\textbf{1. 사용준비}}
+			\textbackslash usepackage [style]\{fncychap\}
+		\end{block}
+
+
+		\begin{block}{\textbf{2. style 종류}}
+			\begin{enumerate}
+			\item Sonny
+			\item Lenny
+			\item Glenn
+			\item Conny
+			\item Rejne
+			\item Bjarne
+			\item Bjornstrup
+			\end{enumerate}
+		\end{block}
+
+
+		\begin{block}{\textbf{3. style 모양 제어}}
+			\begin{itemize}
+			\item \textbackslash makeatletter		   
+			\item \textbackslash ChNameVar{\large\bf}
+			\item \textbackslash ChTitleVar{\large\bf}
+			\item \textbackslash makeatother
+			\end{itemize}
+		\end{block}
+
+
+		\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	%	==========================================================
+	%		Page Size
+	%	----------------------------------------------------------
+		\begin{frame}[c]{Page size}
+
+
+			\begin{block} {Page size}
+			\begin{description}[12345678901234567890]
+			\item	[a4paper] 210mm $\times$ 297mm
+			\item	[a5paper]
+			\item	[b5paper]
+			\item	[letterpaper]
+			\item	[legalpaper]
+			\item	[executivepaper]
+			\end{description}
+			\end{block}
+
+
+			\begin{example}
+			\begin{itemize}
+			\item[]	\textbackslash documentclass[a4paper,landscape,12pt]\{article\}
+			\item[]	\textbackslash documentclass[a5paper,landscape,12pt]\{article\}
+			\end{itemize}
+			\end{example}
+
+			\begin{itemize}
+			\item[]	landscape
+			\item[]	portrait
+			\end{itemize}
+
+
+		\end{frame}
+
+	%	----------------------------------------------------------
+	%		Page Size : geometry package ( 전체 여백을 지정한다. )
+	%	----------------------------------------------------------
+		\begin{frame}[t]
+		\frametitle{geometry package}
+
+			\begin{block} {geometry package}
+			\textbackslash usepackage
+						[ top=0.0mm, \\
+						\hspace{6em} left=0.0mm, \\
+						\hspace{6em} bottom=0.0mm, \\
+						\hspace{6em} righr=0.0mm] \\
+						\hspace{6em} \{geometry\}
+			\end{block}
+
+	%	----------------------------------------------------------
+
+			\begin{block} {geometry 옵션 인자}
+			\begin{description}[12345678901234567890]
+			\item	[paperwidth]		=25cm
+			\item	[paperheight]		=35cm
+			\item	[papersize]		=\{25cm,35cm\}
+			\item	[width]			=20cm \% total width
+			\item	[heigth]			=30cm \% total heigth
+			\item	[total]			=\{20cm,30cm\}
+			\item	[textwidth]		=18cm \% width - marginpar
+			\item	[textheight]		=25cm \% heigth - header - footer
+			\item	[body]			=\{18cm,25cm\}
+			\item	[left]			=3cm \% left margin
+			\item	[right]			=1.5cm \% right margin
+			\item	[hmargin]			=\{3cm,2cm\}
+			\item	[top]			=2cm \% top margin
+			\item	[bottom]			=3cm \% bottom margin
+			\item	[vmargin]			=\{2cm,3cm\}
+			\item	[marginparwidth]	=2cm
+			\item	[head]			=1cm \% header space
+			\end{description}
+			\end{block}
+
+			\begin{block} {Page Size}
+			\end{block}
+
+			\begin{block} {layout Size}
+			\end{block}
+
+			\begin{block} {Body Size}
+			\end{block}
+
+			\begin{block} {Margin Size}
+			\end{block}
+
+		\end{frame}
+
+
+	%	----------------------------------------------------------
+	%		Page layout : 페이지 레이아웃을 바꾼다
+	%	----------------------------------------------------------
+		\begin{frame}[t]
+		\frametitle{geometry package}
+
+			\begin{block} {page layout 변경}
+			\begin{itemize}
+			\item[] \textbackslash new geometry \{ \}
+			\item[] \textbackslash re store geometry \{ \}
+			\item[] 
+			\item[] \textbackslash save geometry \{ \(<\) name \(>\)  \}
+			\item[] \textbackslash re store geometry \{ \(<\) name \(>\)  \}
+			\end{itemize}
+
+			\end{block}
+
+	%	----------------------------------------------------------
+
+			\begin{example} {geometry 옵션 인자}
+			\begin{itemize}
+			\item[] \textbackslash usepackage[hmargin=3cm]\{geometry\}
+			\item[] 
+			\item[] \textbackslash begin\{document\}
+			\item[] \hspace{4em}	Layout L1
+			\item[] \textbackslash newgeometry\{left=3cm,right=1cm,bottom=0.1cm\}
+			\item[] \hspace{4em}	Layout L2 (new)
+			\item[] \textbackslash restoregeometry
+			\item[] \hspace{4em}	Layout L1 (restored)
+			\item[] \textbackslash newgeometry\{margin=1cm,includefoot\}
+			\item[] \textbackslash savegeometry\{L3\}
+			\item[] \hspace{4em}	L3 (new, saved)
+			\item[] \textbackslash restoregeometry
+			\item[] \hspace{4em}	L1 (restored)
+			\item[] \textbackslash newgeometry\{margin=1cm,includefoot\}
+			\item[] \hspace{4em}	L4 (new)
+			\item[] \textbackslash loadgeometry\{L3\}
+			\item[] \hspace{4em}	L3 (loaded)
+			\item[] \textbackslash end\{document\}
+			\end{itemize}
+			\end{example}
+
+
+		\end{frame}
+
+	%	----------------------------------------------------------
+	%		Page rotation : 페이지를 돌린다
+	%	----------------------------------------------------------
+		\begin{frame}[t]
+		\frametitle{페이지를 돌린다}
+
+			\begin{block} {페이지 전체를 돌리기}
+			\begin{itemize}
+			\item[] \textbackslash usepackage \{ pdflscape \}
+			\item[] 
+			\item[] \textbackslash begin \{ landscape \}
+			\item[] \textbackslash end \{ landscape \}
+			\end{itemize}
+			\end{block}
+
+			\begin{block} {페이지는 놓아두고 그림이나 표등을 돌린다}
+			\begin{itemize}
+			\item[] \textbackslash usepackage \{ lscape \}
+			\item[] 
+			\item[] \textbackslash begin \{ landscape \}
+			\item[] \textbackslash end \{ landscape \}
+			\end{itemize}
+			\end{block}
+
+
+		\end{frame}
+
+
+	%	==========================================================
+	%		문단 모양
+	%	----------------------------------------------------------
+
+
+	%	----------------------------------------------------------
+	%		Line and page Breaking
+	%	----------------------------------------------------------
+		\begin{frame}[t]{페이지 나누기 줄바꾸기 Line and page Breaking}
+
+			\begin{block} {Line and page Breaking}
+			\begin{enumerate}
+			\item	\textbackslash \textbackslash 
+			\item	\textbackslash \textbackslash  *
+			\item	\textbackslash clear page
+			\item	\textbackslash clear double page
+			\item	\textbackslash hyphenation
+			\item	\textbackslash line break
+			\item	\textbackslash new line
+			\item	\textbackslash no line break
+			\item	\textbackslash no page break
+			\item	\textbackslash page break
+			\end{enumerate}
+			\end{block}
+
+		\end{frame}
+
+	%	----------------------------------------------------------
+	%		문단 첫줄 들여쓰기
+	%	----------------------------------------------------------
+		\begin{frame}[t]{문단 첫줄 들여쓰기}
+
+			\begin{block} {문단 첫줄 들여쓰기}
+			\textbackslash par indent
+			\end{block}
+
+			\begin{example}
+			\textbackslash setlength \{ \textbackslash parindent \} \{ 0.0cm \}\\
+			\end{example}
+
+		
+		\end{frame}
+
+	%	----------------------------------------------------------
+	%		문단과 문단 사이의 간격
+	%	----------------------------------------------------------
+		\begin{frame}[t]{문단과 문단 사이의 간격}
+
+			\begin{block} {문단과 문단 사이의 간격}
+			\textbackslash par skip
+			\end{block}
+
+			\begin{example}
+			\textbackslash setlength \{ \textbackslash parskip \} \{ 0.0pt \}\\
+			\textbackslash setlength \{\textbackslash parskip \} \{ 1cm plus 4mm minus\}	\\		
+			\end{example}
+
+			\begin{example}
+			\textbackslash small skip
+			\textbackslash med skip
+			\textbackslash big skip
+			\end{example}
+
+		
+		\end{frame}
+
+
+	%	----------------------------------------------------------
+	%		문단내에서의 줄간격
+	%	----------------------------------------------------------
+		\begin{frame}[t]{문단내에서의 줄간격}
+
+			\begin{block} {문단내에서의 줄간격}
+			\textbackslash usepackage \{ setspace \} \\
+			\begin{itemize}
+			\item[]	\textbackslash singlespacing 
+			\item[]	\textbackslash onehalfspacing 
+			\item[]	\textbackslash doublespacing 
+			\item[]	\textbackslash setstretch \{ $<$ $>$ \} 
+			\item[]	\textbackslash linespread \{ $<$ factor $>$ \}
+			\end{itemize}
+
+			\end{block}
+
+			\begin{example}
+			\textbackslash linespread \{ 1.6 \} : double-spacing \\
+			\textbackslash linespread \{ 1.3 \} : one-and-a half spacing 
+			\end{example}
+	
+			\begin{example}
+			\textbackslash begin \{ doublespace \} \\
+			.............. \\
+			\textbackslash end \{ doublespace \} \\
+			\end{example}
+
+			\begin{example}
+			\textbackslash begin \{ spacing \} \{ 2.0 \} \\
+			.............. \\
+			\textbackslash end \{ spacing \} \\
+			\end{example}
+
+		\end{frame}
+
+
+
+	%	----------------------------------------------------------
+	%		문자간의 간격 띄우기
+	%	----------------------------------------------------------
+		\begin{frame}[t,allowframebreaks]{문자간의 간격 띄우기}
+
+			\begin{block} {문자간의 간격 띄우기}
+			\begin{description}[1234567890]
+			\item [$\sim$] 
+			\item [\textbackslash hspace \{ 2cm \} ]
+			\item [\textbackslash quad] 	(여백입력)\\
+			\item [\textbackslash qquad] 	(여백입력 두배크기)\\
+			\item [\textbackslash  ]textspace \\
+			\item [\textbackslash ;] large space \\
+			\item [\textbackslash \(>\)] medium space \\
+			\item [\textbackslash ,] small space \\
+			\item [\textbackslash !] negative space \\
+			\end{description}
+
+			\end{block}
+
+		
+		\end{frame}
+
+
+
+	%	----------------------------------------------------------
+	%		문단 정렬
+	%	----------------------------------------------------------
+		\begin{frame}[t]{문단 : 문단 정렬}
+
+			\begin{block} {문단 정렬 :  범위 설정}
+			\begin{description}[123456789012345]
+			\item [오른쪽 정렬]	\textbackslash begin\{flushright\} text \textbackslash  end\{flushright\}
+			\item [왼쪽 정렬]		\textbackslash begin\{flushleft\} text \textbackslash  end\{flushleft\}
+			\item [가운데 정렬]	\textbackslash begin\{center\} text \textbackslash  end\{center\}
+			\end{description}
+			\end{block}
+
+			\begin{block} {문단 정렬 : 선언 이후로 전부}
+			\begin{description}[123456789012345]
+			\item [오른쪽 정렬]	\textbackslash ragged right
+			\item [왼쪽 정렬]		\textbackslash ragged left
+			\item [가운데 정렬]	\textbackslash centering
+			\end{description}
+			\end{block}
+
+		
+		\end{frame}
+
+
+
+
+
+	%	==========================================================
+	%		개조식 문서
+	%	----------------------------------------------------------
+
+
+	%	----------------------------------------------------------
+	%		List
+	%	----------------------------------------------------------
+		\begin{frame}[t]{List}
+
+		
+		\end{frame}
+
+
+	%	----------------------------------------------------------
+	%		itemize
+	%	----------------------------------------------------------
+		\begin{frame}[t]{itemize}
+
+			\begin{block}{itemize}
+			\end{block}
+
+			\begin{block}{itemize 기호 모양 바꾸기}
+			\end{block}
+
+
+
+		\end{frame}
+
+	%	----------------------------------------------------------
+	%		enumerate
+	%	----------------------------------------------------------
+		\begin{frame}[t]{enumerate}
+
+			\begin{block}{enumerate}
+			\end{block}
+
+			\begin{block}{enumerate 기호 모양 바꾸기}
+			\end{block}
+
+
+		\end{frame}
+
+
+	%	----------------------------------------------------------
+	%		description
+	%	----------------------------------------------------------
+		\begin{frame}[t]{description}
+
+			\begin{block}{align : item의 정렬 방식}
+			\begin{itemize}
+			\item align=left
+			\item align=right
+			\end{itemize}
+			\end{block}
+
+			\begin{block}{style}
+			\begin{itemize}
+			\item style=standard
+			\item style=unboxed
+			\item style=nextline
+			\item style=sameline,  leftmargin=2cm 충분히 크게 주어야 효과 있음
+			\end{itemize}
+			\end{block}
+
+
+			\begin{block}{description 기호 모양 바꾸기}
+			\end{block}
+
+
+		\end{frame}
+
+
+
+
+
+
+	%	----------------------------------------------------------
+	%		TAB
+	%	----------------------------------------------------------
+		\begin{frame}[t]{TAB}
+
+		\begin{block}{tabbing}
+		\begin{itemize}
+		\item[]	\textbackslash begin \{tabbing\}
+		\item[]	\textbackslash hspace\{2cm\}	\textbackslash = 
+				\textbackslash hspace\{2cm\}	\textbackslash = 
+				\textbackslash hspace{2cm}	
+				\textbackslash \textbackslash 
+
+		\item[]	text	\textbackslash $>$
+				text	\textbackslash $>$
+				text	\textbackslash\textbackslash
+
+		\item[]	text	\textbackslash $>$
+				text	\textbackslash $>$
+				text	\textbackslash\textbackslash
+
+		\item[]	\textbackslash end \{tabbing\}
+		\end{itemize}
+
+		\end{block}
+
+
+		\end{frame}
+
+
+	%	----------------------------------------------------------
+	%		TAB enum : 문제 풀이의 보기 항목
+	%	----------------------------------------------------------
+		\begin{frame}[t]{TAB enum}
+
+		\begin{block}{tabenum}
+		\begin{itemize}
+		\item[]	\textbackslash begin\{tabenum\}[\textbackslash bfseries1]
+		\item[]	\textbackslash tabenumitem 		\$z=\textbackslash displaystyle\textbackslash frac xy\$
+		\item[]	\textbackslash tabenumitem 		\$z=\textbackslash displaystyle\textbackslash frac xy\$\textbackslash\textbackslash 
+		\item[]	\textbackslash skipitem
+		\item[]	\textbackslash tabenumitem 		\$z=\textbackslash displaystyle\textbackslash frac xy\$\textbackslash\textbackslash 
+		\item[]	\textbackslash item 			\$z=\textbackslash displaystyle\textbackslash frac xy\$\textbackslash\textbackslash 
+		\item[]	\textbackslash noitem 			\$z=\textbackslash displaystyle\textbackslash frac xy\$\textbackslash\textbackslash 
+		\item[]	\textbackslash end\{tabenum\}
+		\end{itemize}
+		\end{block}
+
+		\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+	%	----------------------------------------------------------	List : Vertical spacing
+
+		\begin{frame}[c]{List : Vertical Horizontal spacing}
+
+			\begin{block} {Vertical spacing}
+			\begin{enumerate}
+			\item	top sep		: 상단 간격
+			\item	par top sep	: 상단 간격
+			\item	par sep		: 아이템 내에서의 문단 간격
+			\item	item sep		: 아이템간 간격
+			\end{enumerate}
+			\end{block}
+
+			\begin{block} {Vertical spacing}
+			\begin{enumerate}
+			\item	상단		: top sep + par skip + par top sep
+			\item	하단		: top sep + par skip + par top sep
+			\item	아이템간	: item sep + par sep
+ 			\item	아이템 내 간격	: par sep
+			\end{enumerate}
+			\end{block}
+
+	%	----------------------------------------------------------	List : Horizontal spacing
+
+			\begin{block} {Horizontal spacing}
+			\begin{enumerate}
+			\item	left margin		: 왼쪽 여백
+			\item	right margin		: 오른쪽 여백
+			\item	list par indent	: 들여쓰기
+			\item	label width		: 라벨의 폭
+			\item	label sep			: 라벨의 본분과의 간격
+			\item	item indent		: 아이템간 간격
+			\end{enumerate}
+			\end{block}
+
+		
+		\end{frame}
+
+
+
+	%	----------------------------------------------------------
+	%		Global settings
+	%	----------------------------------------------------------
+		\begin{frame}[c]{List ; Global settings}
+
+			\begin{block} {Global settings}
+			\begin{enumerate}
+			\item	\textbackslash setlist [ enumerate, $<$ \textit{level} $>$ ] \{ $<$ \textit{format} $>$ \}
+			\item	\textbackslash itemize [ itemize, $<$ \textit{level} $>$ ] \{ $<$ \textit{format} $>$ \}
+			\item	\textbackslash description [ description, $<$ \textit{level} $>$ ] \{ $<$ \textit{format} $>$ \}
+			\item	\textbackslash setlist [ $<$ \textit{level} $>$ ] \{ $<$ \textit{format} $>$ \}
+			\end{enumerate}
+			\end{block}
+
+		
+		\end{frame}
+
+
+
+%	-------------------------------------------------------------------------------
+%		Vertical and Horizontal spacing
+%	-------------------------------------------------------------------------------
+%		\setlist[enumerate,1]{labelindent=0.0em,leftmargin=8.0ex,rightmargin=2.0em,}
+%		\setlist[enumerate,2]{labelindent=0.0em,leftmargin=4.0ex,rightmargin=2.0em,}
+%		\setlist[enumerate,3]{labelindent=0.0em,leftmargin=3.0ex,rightmargin=2.0em,}
+
+%	-------------------------------------------------------------------------------
+%		Label
+%	-------------------------------------------------------------------------------
+%		\setlist[enumerate,1]{ label=\arabic*., ref=\arabic* }
+%		\setlist[enumerate,1]{ label=\emph{\arabic*.}, ref=\emph{\arabic*} }
+%		\setlist[enumerate,1]{ label=\textbf{\arabic*.}, ref=\textbf{\arabic*} }
+
+%		\setlist[enumerate,2]{ label=\emph{\alph*}),ref=\theenumi.\emph{\alph*} }
+%		\setlist[enumerate,3]{ label=\roman*), ref=\theenumii.\roman* }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	%	==========================================================
+	%		표 그리기
+	%	----------------------------------------------------------
+
+
+		\begin{frame}[plain]
+		\centering
+		\scalebox{10}{표}
+
+		
+		\end{frame}
+
+	%	----------------------------------------------------------
+	%		표
+	%	----------------------------------------------------------
+		\begin{frame}[t]{표}
+
+		\begin{block}{표의 caption}
+		\end{block}
+
+
+
+		tabular height\\
+		\textbackslash renewcommand \{ \textbackslash arraystretch\} \{1.2\} \\
+		1 : default\\
+		\textbackslash setlength \textbackslash minrowclearance \{2.4pt\} \\
+		\textbackslash setlength \textbackslash extrarowheight \{5.0pt\} 
+
+		\end{frame}
+
+
+	%	----------------------------------------------------------
+	%		tablex
+	%	----------------------------------------------------------
+		\begin{frame}[t]{표의 배치}
+
+		\begin{block}{문서 내에서 표의 배치}
+			\begin{itemize}
+			\item[h] 이 자리, here
+			\item[t] 문서의 최상단, top
+			\item[b] 문서의 최하단, bottom
+			\item[p] 별도위 표만 모아 놓은 장, page
+			\end{itemize}
+		\end{block}
+
+
+		\begin{block}{표 내부에서 text의 배치}
+			\begin{itemize}
+			\item[c] 가운데 배치
+			\item[l] 왼쪽 배치
+			\item[r] 오른쪽 배치
+			\item[p] 줄바꿈 가능하게, page graph\\
+					중괄호를 붙여 크기를 강제로 지정할 수 있다.
+			\end{itemize}
+		\end{block}
+
+		\begin{block}{표 내부에서 text의 배치}
+			\begin{description}[12345678901234567890]
+			\item[] \textbackslash usepackage\{array\}
+			\item[]
+			\item[p\{width\}] Top align, the same as usual.
+			\item[m\{width\}] Middle align
+			\item[b\{width\}] Bottom align
+			\end{description}
+		\end{block}
+
+		clear page명령에 의해 표가 커거 강제로 뒤로 배치되는 것을 막을 수 있다.
+		\end{frame}
+
+
+	%	----------------------------------------------------------
+	%		줄 내부 줄치기
+	%	----------------------------------------------------------
+		\begin{frame}[t]{표 내부 줄치기}
+
+		\begin{block}{표 내부 줄치기}
+		\begin{itemize}
+		\item[] \textbackslash usepackage\{booktabs\}	\% toprule cmidrule midrule bottomrule  
+		\item[]
+		\item[]	\textbackslash top rule
+		\item[]	\textbackslash mid rule
+		\item[]	\textbackslash bottom rule
+		\end{itemize}
+		\end{block}
+
+
+		\begin{columns}[t]
+		\begin{column}{.4\textwidth}
+				\begin{example}
+					\begin{tabular}{llr}
+					\toprule
+					\multicolumn{2}{c}{Item} \\
+					\cmidrule(r){1-2}
+					Animal & Description & Price (\$)\\
+					\midrule
+					Gnat & per gram & 13.65 \\
+					& each & 0.01 \\
+					Gnu & stuffed & 92.50 \\
+					Emu & stuffed & 33.33 \\
+					Armadillo & frozen & 8.99 \\
+					\bottomrule
+					\end{tabular}
+				\end{example}
+		\end{column}
+
+		\begin{column}{.5\textwidth}
+				\begin{block}{code}
+				\begin{itemize}
+				\item[] \textbackslash begin \{ tabular \} \{ llr \}
+				\item[] \textbackslash toprule
+				\item[] \textbackslash multicolumn\{2\}\{c\}\{Item\} \textbackslash \textbackslash 
+				\item[] \textbackslash cmidrule(r)\{1-2\}
+				\item[] Animal \& Description \& Price (\$)\textbackslash \textbackslash 
+				\item[] \textbackslash midrule
+				\item[] Gnat \& per gram \& 13.65 \textbackslash \textbackslash 
+				\item[] \& each \& 0.01 \textbackslash \textbackslash 
+				\item[] Gnu \& stuffed \& 92.50 \textbackslash \textbackslash 
+				\item[] Emu \& stuffed \& 33.33 \textbackslash \textbackslash 
+				\item[] Armadillo \& frozen \& 8.99 \textbackslash \textbackslash 
+				\item[] \textbackslash bottomrule
+				\item[] \textbackslash end\{tabular\}
+				\end{itemize}
+				\end{block}
+		\end{column}
+
+		\end{columns}
+		
+		\end{frame}
+
+
+	%	----------------------------------------------------------
+	%		표 줄 간격 조정
+	%	----------------------------------------------------------
+		\begin{frame}[t]{표 줄 간격 조정}
+
+		\begin{block}{표 줄간격 조정}
+		\begin{description}[12345678901234567890]
+		\item[asrray stretch] 		\textbackslash re new command \{ \textbackslash arraystretch \} \{ 1.2\}
+		\item[extra row height]	\textbackslash usepackage \{ array \} \par
+								\textbackslash set length \{ \textbackslash extrarowheight \}\{1.5pt\}
+		\item[big strut]			\textbackslash usepackage \{ bigstrut\} \\
+								\textbackslash bigstrut
+		\end{description}
+		\end{block}
+		
+		% ============================================
+		\begin{columns}[t]
+		% --------------------------------------------
+		\begin{column}{0.3\textwidth}
+		\begin{block}{asrray stretch}
+		\begin{itemize}
+		\item[] \textbackslash re new command \{ \textbackslash arraystretch \} \{ 1.2\}
+		\end{itemize}
+		\end{block}
+		{
+		\renewcommand{\arraystretch}{1.2}
+		\begin{tabular}{|c|l|}
+		\hline
+		a & Row 1 \\ \hline
+		b & Row 2 \\ \hline
+		c & Row 2 \\
+		d & Row 4 \\ \hline
+		\end{tabular}
+		}
+
+		{
+		\renewcommand{\arraystretch}{2.0}
+		\begin{tabular}{|c|l|}
+		\hline
+		a & Row 1 \\ \hline
+		b & Row 2 \\ \hline
+		c & Row 2 \\
+		d & Row 4 \\ \hline
+		\end{tabular}
+		}
+
+
+		\end{column}
+
+		% --------------------------------------------
+		\begin{column}{0.3\textwidth}
+		\begin{block}{Extra row height}
+		\begin{itemize}
+		\item[] \textbackslash usepackage \{ array \}
+		\item[] \textbackslash set length \{ \textbackslash extrarowheight \}\{1.5pt\}
+		\end{itemize}
+		\end{block}
+
+		{
+		\setlength{\extrarowheight}{1.0em}
+		\begin{tabular}{|l|l|}
+		\hline
+		a & Row 1 \\ \hline
+		b & Row 2 \\ \hline
+		c & Row 3 \\
+		d & Row 4 \\ \hline
+		\end{tabular}
+		}
+
+		{
+		\setlength{\extrarowheight}{2.0em}
+		\begin{tabular}{|l|l|}
+		\hline
+		a & Row 1 \\ \hline
+		b & Row 2 \\ \hline
+		c & Row 3 \\
+		d & Row 4 \\ \hline
+		\end{tabular}
+		}
+
+		\end{column}
+
+		% --------------------------------------------
+		\begin{column}{0.3\textwidth}
+		\begin{block}{Big struts}
+		\begin{itemize}
+		\item[] \textbackslash usepackage \{ bigstrut\}
+		\item[] \textbackslash bigstrut
+		\end{itemize}
+		\end{block}
+
+		\begin{tabular}{|l|l|}
+		\hline
+		a & Row 1 \bigstrut \\ \hline
+		b & Row 2 \bigstrut \\ \hline
+		c & Row 2 \bigstrut[t] \\
+		d & Row 4 \bigstrut[b] \\ \hline
+		\end{tabular}
+
+
+		\begin{tabular}{|l|l|}
+		\hline
+		a & Row 1 \bigstrut \\ \hline
+		b & Row 2 \bigstrut \\ \hline
+		c & Row 2 \bigstrut[t] \\ \hline
+		d & Row 4 \bigstrut[b] \\ \hline
+		\end{tabular}
+
+
+
+		\end{column}
+		% --------------------------------------------
+		\end{columns}
+		% ============================================
+
+
+		\end{frame}
+
+	%	----------------------------------------------------------
+	%		표 열 간격 조정
+	%	----------------------------------------------------------
+		\begin{frame}[t]{표 열간격 조정}
+
+		\begin{block}{표 열간격 조정}
+		\begin{description}[12345678901234567890]
+		\item[top col sep] 		\textbackslash set length \{\textbackslash tabcolsep\} \{ 10pt\}
+		\end{description}
+		\end{block}
+
+
+
+		\end{frame}[t]{표 열간격 조정}
+
+	%	----------------------------------------------------------
+	%		열병합 행병합
+	%	----------------------------------------------------------
+		\begin{frame}[t]{열병합 행병합}
+
+		\begin{block}{열병합 : 옆으로 병합}
+		\begin{itemize}
+		\item[]	\textbackslash multi column \{ number cols \} \{align \} \{ 내용 \}
+		\item	align : l, c, r
+		\end{itemize}
+		\end{block}
+
+
+		\begin{example}
+		\begin{itemize}
+		\item[]	\textbackslash multi column \{2\} \{c\} \{ 내용 \}
+		\end{itemize}
+		\end{example}
+
+		\begin{block}{행병합 : 아래로 병합}
+		\begin{itemize}
+		\item[]	\textbackslash multi row \{number row \} \{width*\} \{ 내용 \}
+		\item    width = *
+		\end{itemize}
+		\end{block}
+
+		\begin{example}
+		\begin{itemize}
+		\item[]	\textbackslash multi row \{2\} \{*\} \{ 내용 \}
+		\end{itemize}
+		\end{example}
+
+		
+		\end{frame}
+
+
+
+
+	%	----------------------------------------------------------
+	%		tablex
+	%	----------------------------------------------------------
+		\begin{frame}[t]{table x}
+
+		
+			\begin{block}{code}
+			\begin{itemize}
+				\item[] \textbackslash usepackage\{booktabs\}	\% toprule cmidrule midrule bottomrule  
+				\item[] \textbackslash usepackage\{tabularx\}
+				\item[] 
+				\item[] \textbackslash begin\{table\}[h]
+				\item[] \textbackslash caption\{원형 구조물 허용공차(Allowable Tolerance)\}
+				\item[] \textbackslash centering 
+				\item[] \textbackslash begin\{tabularx\}\{0.8\textbackslash textwidth\}\{ X X c \}
+				\item[] \textbackslash toprule
+				\item[] 검사  항목\&허용  공차\&비고\textbackslash \textbackslash 
+				\item[] \textbackslash midrule
+				\item[] 평면  위치\&+ 15mm\textbackslash \textbackslash 
+				\item[] 반          경\&+ 10mm  - 5mm\textbackslash \textbackslash 
+				\item[] 바    닥    고\&+  5mm  - 2mm\textbackslash \textbackslash 
+				\item[] 벽  체  두  께\&+ 10mm  - 5mm\textbackslash \textbackslash 
+				\item[] 벽 체 천 단 고\&+  5mm  - 3mm\textbackslash \textbackslash 
+				\item[] \textbackslash bottomrule
+				\item[] \textbackslash end\{tabularx\} 
+				\item[] \textbackslash label\{table-1\}
+				\item[] \textbackslash end\{table\}
+			\end{itemize}
+			\end{block}{code}
+	
+			\begin{example}
+				\begin{table}[h]
+				\caption {원형 구조물 허용공차(Allowable Tolerance)}
+				\centering 
+				\begin{tabularx}{0.8\textwidth}{ X X c }
+				\toprule
+				검사  항목	&허용  공차&비고\\
+				\midrule
+				평면  위치		&+ 15mm\\
+				반          경	&+ 10mm  - 5mm\\
+				바    닥    고		&+  5mm  - 2mm\\
+				벽  체  두  께		&+ 10mm  - 5mm\\
+				벽 체 천 단 고		&+  5mm  - 3mm\\
+				\bottomrule
+				\end{tabularx} 
+				\label{table-1}
+				\end{table}
+			\end{example}
+
+
+
+		\end{frame}
+
+	%	----------------------------------------------------------
+	%		table y
+	%	----------------------------------------------------------
+		\begin{frame}[t]{table y}
+
+
+
+		\end{frame}
+
+	%	----------------------------------------------------------
+	%		긴표
+	%	----------------------------------------------------------
+		\begin{frame}[t]{긴표}
+
+		\begin{block}{긴표}
+		\begin{itemize}
+		\item[] \textbackslash usepackage\{longtable\}
+		\item[] 
+		\item[]	\textbackslash begin\{longtable\} \{ |c|c|c|c| \}
+		\item[]	\hspace{2em} \textbackslash endfirsthead
+		\item[]	\hspace{2em} \textbackslash endhead
+		\item[]	\hspace{2em} \textbackslash endfoot
+		\item[]	\hspace{2em} \textbackslash endlastfoot
+		\item[]	
+		\item[]	\textbackslash end\{longtable\} 
+		\end{itemize}
+		\end{block}
+
+
+
+		
+		\end{frame}
+
+
+	%	----------------------------------------------------------
+	%		표속에 각주 넣기
+	%	----------------------------------------------------------
+		\begin{frame}[t,shrink=0]{표속에 각주 넣기}
+
+			\begin{block} {표속에 각주 넣기}
+			\textbackslash footnotemark [ 번호 ] \\
+			\textbackslash footnotetext [ 번호 ] \{ 각주 내용 \}
+			\end{block}
+
+			\begin{example}
+			\begin{itemize}
+				\item[]	\textbackslash begin\{table\}[!h]
+				\item[]	\textbackslash caption\{페이지 바닥에 각주를 표시하는 표\}
+				\item[]	\textbackslash begin\{center\}
+				\item[]	\textbackslash begin\{tabular\}\{|c|c|c|\}
+				\item[]	\textbackslash hline
+				\item[]	GDP \textbackslash footnotemark[1] \&
+				\item[]	GDP \textbackslash footnotemark[2] \&
+				\item[]	GDP \textbackslash footnotemark[3] \textbackslash \textbackslash
+				\item[]	\textbackslash hline
+				\item[]	\textbackslash end\{tabular\}
+				\item[]	\textbackslash end\{center\}
+				\item[]	\textbackslash label\{tab:pagefootnote\}
+				\item[]	\textbackslash end\{table\}
+				\item[]	
+				\item[]	\textbackslash footnotetext[1]\{2007D 한국은행 \}
+				\item[]	\textbackslash footnotetext[2]\{2008D 한국은향 추정치 \}
+				\item[]	\textbackslash footnotetext[3]\{2008D KDI추정치 \}
+			\end{itemize}
+			\end{example}
+
+
+
+		\textbackslash end \{ table \} 이후에 \textbackslash footnotetext를 위치 시킨다. 
+
+		\end{frame}
+
+
+
+
+	%	==========================================================
+	%		그림
+	%	----------------------------------------------------------
+
+		\begin{frame}[plain]
+		\centering
+		\scalebox{10}{그림}
+
+		
+		\end{frame}
+
+	%	----------------------------------------------------------
+	%		그림 문서에 넣기
+	%	----------------------------------------------------------
+
+		\begin{frame}[t]{그림 : 문서에 그림 넣기}
+
+			\begin{block} {문서에 그림 넣기}
+			\begin{itemize}
+			\item[]	\textbackslash begin \{ figure \} [ where] 
+			\item[]	\textbackslash centering
+			\item[]	\textbackslash  caption \{ 그림 설명문 \}
+			\item[]	\textbackslash  includegraphics \{ 그림파일명.확장자 \}
+			\item[]	\textbackslash  label \{ fig:001 \}
+			\item[]	\textbackslash end \{ figure \}
+			\end{itemize}
+			\end{block}
+
+	%	----------------------------------------------------------	include graphics
+
+			\begin{block} {그림 : 문서에 jpg 파일 넣기  include graphics}
+			\begin{itemize}
+			\item[]	\textbackslash  includegraphics \{ 그림파일명.확장자 \}
+			\item[]	\textbackslash  includegraphics [ scale=0.9 ] \{ 그림파일명.확장자 \}
+			\item[]	\textbackslash  includegraphics [ width=1.0\textbackslash textwidth ] \{ 그림파일명.확장자 \}
+			\item[]	\textbackslash  includegraphics [ angle=value ] \{ 그림파일명.확장자 \}
+			\end{itemize}
+			\end{block}
+
+
+	%	----------------------------------------------------------	include pdf
+
+			\begin{block} {그림 : 문서에 pdf 파일 넣기 include pdf}
+			\begin{itemize}
+			\item[]	\textbackslash includepdf [ pages=-] \{그림파일명.pdf\}
+			\item[]	\textbackslash includepdf [ pages=-, fitpaper=true] \{그림파일명.pdf\}
+			\item[]	\textbackslash includepdf [ pages=-, scale=0.9] \{그림파일명.pdf\}
+			\item[]	\textbackslash includepdf [ pages=-, frame=truee ] \{그림파일명.pdf\}
+			\item[]	\textbackslash includepdf [ pages=-, landscape=false ] \{그림파일명.pdf\}
+			\end{itemize}
+			\end{block}
+
+			page=- : 전체 페이지를 삽입\\
+			fitpaper=trun : 전체 페이지에 배치
+
+	%	---------------------------------------------------------- include path
+			\begin{block} {include 파일경로}
+			\begin{itemize}
+			\item[]	\textbackslash includepdf \{./fig/그림파일명.pdf\}
+			\item[]	\textbackslash graphicspath\{\{images/\}\}   
+
+			\end{itemize}
+			\end{block}
+
+			그래픽 패스는 지정 가능하다.\\
+			pdf 파일의 경로 지정은 ? (답) 그림과 똑 같다.
+
+		\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	%	==========================================================
+	%		수식 
+	%	----------------------------------------------------------
+
+		\begin{frame}[plain]
+		\centering
+		\scalebox{10}{수식}
+
+		
+		\end{frame}
+
+
+
+
+	%	----------------------------------------------------------
+	%		수식 사용전 package 선언
+	%	----------------------------------------------------------
+
+		\begin{frame}[t]{수식}
+
+			\begin{block} {수식 사용전 package 선언}
+			\begin{itemize}
+			\item[]	\textbackslash usepackage \{ amsmath \}
+			\end{itemize}
+			\end{block}
+
+		
+		\end{frame}
+
+
+
+	%	----------------------------------------------------------
+	%		수식 모드
+	%	----------------------------------------------------------
+		\begin{frame}[t, shrink=5]{수식 모드}
+
+			\begin{block} {문단 내 배치}
+				\begin{itemize}
+				\item[]  \$ 수식 입력  \$
+				\item[]  \textbackslash ( 수식 입력  \textbackslash )
+				\item[]  \textbackslash begin \{ 수식 입력  \} \textbackslash end \{ math\}
+				\end{itemize}
+			\end{block}
+
+			\begin{block} {별도 단락으로 배치 (별도의 한줄로 배치) }
+				\begin{itemize}
+				\item[]  \textbackslash [ 수식 입력 \textbackslash ]
+				\item[]  \textbackslash begin \{ displaymath \} \textbackslash end \{ displaymath \}
+				\item[]  \textbackslash begin \{ equation \} \textbackslash end \{ equation \} : 수식 번호를 가짐
+				\end{itemize}
+			\end{block}
+
+			\begin{block} {하나의 수식이 너무 길어서 여러줄에 걸쳐 배치}
+				\begin{itemize}
+				\item[]  \textbackslash begin \{ multline \}  \textbackslash end \{ multline \}  : 
+						\textbackslash \textbackslash로 줄바꿈
+				\end{itemize}
+			\end{block}
+
+			\begin{block} {여러 수식들을 여러줄에 걸쳐 정렬 배치}
+				\begin{itemize}
+				\item[]  \textbackslash begin \{ align * \}  \textbackslash end \{ align * \}
+						: \&로 정렬 기준, \textbackslash \textbackslash로 줄바꿈
+						\textbackslash nonumber 로 수식번호 안 붙임
+				\end{itemize}
+			\end{block}
+
+		
+		\end{frame}
+
+
+	%	----------------------------------------------------------
+	%		수식의 정렬
+	%	----------------------------------------------------------
+		\begin{frame}[t]{수식의 정렬}
+
+			\begin{block} {왼쪽 정렬}
+			\end{block}
+
+			\begin{block} {중간 정렬 : default}
+			\end{block}
+
+			\begin{block} {오른쪽 정렬}
+			\end{block}
+
+		
+		\end{frame}
+
+
+
+
+
+	%	----------------------------------------------------------
+	%		수식 기본 연산 기호
+	%	----------------------------------------------------------
+		\begin{frame}[t]{수식 : 기본 연산 기호}
+
+			\begin{block} {수식 : 기본 연산 기호}
+			\begin{description}
+			\item[더하기] 	$+$
+			\item[빼기] 	$-$
+			\item[곱하기] 	$\times$ ( \$ \textbackslash times \$ )
+			\item[나누기] 	$\div$ (\$\textbackslash div\$)
+			\item[] 		$\frac{1}{2}$ (\$\textbackslash frac\{1\}\{2\}\$)
+			\item[] 		$\displaystyle\frac{1}{2}$
+						(\$\textbackslash displaystyle\textbackslash frac\{1\}\{2\}\$)
+			\end{description}
+			\end{block}
+	
+	%	----------------------------------------------------------	수식 기본 기호
+			\begin{block} {기본 기호}
+			\begin{description}
+			\item[$\therefore$] 	\$ \textbackslash therefore \$
+			\end{description}
+			\end{block}
+
+		
+		\end{frame}
+
+
+	%	----------------------------------------------------------
+	%		수식에서 한글 입력
+	%	----------------------------------------------------------
+		\begin{frame}[t]{수식에서 한글 입력}
+
+			\begin{block} {수식에서 한글 입력}
+			수식에서 한글 입력기 깨어지는 현상이 무조건 발생한다.\\
+			이때는 한글 부분은 \textbackslash \{\}로 묶어서 처리하면 된다.
+			\end{block}
+
+		
+		\end{frame}
+
+	%	----------------------------------------------------------
+	%		수식 미분
+	%	----------------------------------------------------------
+		\begin{frame}[t]{미분}
+
+		
+		\end{frame}
+
+
+	%	----------------------------------------------------------
+	%		수식 적분
+	%	----------------------------------------------------------
+		\begin{frame}[t]{적분}
+
+		
+		\end{frame}
+
+
+	%	----------------------------------------------------------
+	%		수식 행렬
+	%	----------------------------------------------------------
+		\begin{frame}[t]{행렬}
+
+		
+		\end{frame}
+
+
+
+
+
+
+
+% 	================================================= chapter 	====================
+%		box
+%	-------------------------------------------------------------------------------
+
+		\begin{frame}[plain]
+		\centering
+		\scalebox{10}{BOX}
+
+		
+		\end{frame}
+
+	% ------------------------------------------------------------------------------
+	%	par box
+	% ------------------------------------------------------------------------------
+
+		\begin{frame}[t]{parbox}
+
+			\begin{block} {parbox}
+			\textbackslash parbox[position][height][inner-pos]\{width\}\{text\}
+			\end{block}
+
+			\begin{block}{position}
+			\begin{itemize}
+			\item	t --- text is placed at the top of the box.
+			\item	c --- text is centred in the box.
+			\item	b --- text is placed at the bottom of the box.
+			\item	s --- stretch vertically. The text must contain vertically stretchable space for this to work.
+			\end{itemize}
+			\end{block}
+
+	% ------------------------------------------------------------------------------	mbox
+
+			\begin{block} {mbox}
+			\textbackslash mbox\{text\}
+			\end{block}
+
+			\begin{example}
+			\mbox{mbox mbox mbox mbox mbox mbox mbox}
+			\end{example}
+
+	% ------------------------------------------------------------------------------	fbox
+
+			\begin{block} {f box}
+			\textbackslash fbox\{text\}
+			\end{block}
+
+			\begin{example}
+			\fbox{mbox mbox mbox mbox mbox mbox mbox}
+			\end{example}
+
+	% ------------------------------------------------------------------------------	pbox
+
+			\begin{block} {p box}
+			\textbackslash pbox[b]\{\textbackslash textwidth\}\{my text\}
+			\end{block}
+
+			\begin{example}
+			\end{example}
+
+	% ------------------------------------------------------------------------------	save box
+
+			\begin{block} {save box}
+			\end{block}
+
+	% ------------------------------------------------------------------------------	rotate box
+
+			\begin{block} {rotate box}
+			\end{block}
+
+	% ------------------------------------------------------------------------------	colorbox and fcolorbox
+
+			\begin{block} {colorbox}
+			\end{block}
+
+
+			\begin{block} {fcolorbox}
+			\end{block}
+
+		
+		\end{frame}
+
+
+
+	% ------------------------------------------------------------------------------	resize box
+
+		\begin{frame}[t]{resize box}
+
+
+			\begin{block} {resize box}
+			\textbackslash resizebox\{수평 3em\}\{수직 2em\}\{문서 내용 Dunhill style\}
+
+			\end{block}
+
+			\begin{example}
+		\resizebox{3em}{2em}{Dunhill style} \\
+		\resizebox{4em}{2em}{Dunhill style} \\
+		\resizebox{5em}{2em}{Dunhill style} \\
+		\resizebox{30em}{2em}{글자 수평 수직 확대} \\
+		\resizebox{10em}{3em}{글자 수평 수직 확대} \\
+
+%
+%		\resizebox{8em}{1ex}{Dunhill style} \\
+%		\resizebox{8em}{2ex}{Dunhill style} \\
+%		\resizebox{8em}{3ex}{Dunhill style} \\
+%		\resizebox{8em}{4ex}{Dunhill style} \\
+%		\resizebox{8em}{5ex}{Dunhill style} \\
+%		\resizebox{8em}{6ex}{Dunhill style} \\
+			\end{example}
+
+
+	% ------------------------------------------------------------------------------ scale box
+
+			\begin{block} {scale box}
+			\textbackslash scalebox\{스케일 크기 1\}\{문서 내용 화이팅!\}
+			\end{block}
+
+			\begin{example}
+		\scalebox{1}{화이팅!}\\
+		\scalebox{2}{화이팅!}\\
+		\scalebox{3}{화이팅!}\\
+			\end{example}
+
+	% ------------------------------------------------------------------------------ max size box
+
+			\begin{block} {max size box}
+			\begin{itemize}
+			\item[] \textbackslash usepackage\{adjustbox\}
+			\item[] \textbackslash framebox [width] [pos] \{text\}
+			\end{itemize}
+			\end{block}
+
+	
+
+	% ------------------------------------------------------------------------------	fancybox
+
+			\begin{block} {scale box}
+				\begin{itemize}
+				\item double box
+				\item oval box
+				\item shadow box
+				\end{itemize}
+			\end{block}
+
+	
+		\end{frame}
+
+
+
+	% ------------------------------------------------------------------------------
+	%	makebox
+	% ------------------------------------------------------------------------------
+		\begin{frame}[t]{makebox}
+
+
+			\begin{block} {make box}
+			\textbackslash makebox [ width ] [ pos ] \{text\}
+			\end{block}
+
+
+			\begin{block} {position}
+				\begin{itemize}
+				\item	c : center
+				\item	l : flushleft
+				\item	r : flushright
+				\item	s : spread
+				\end{itemize}
+			\end{block}
+
+			\begin{example}
+			c : \makebox[0.4\linewidth][c]	{makebox makebox }\\
+			l : \makebox[0.4\linewidth][l]	{makebox makebox }\\
+			r : \makebox[0.4\linewidth][r]	{makebox makebox }\\
+			s : \makebox[0.4\linewidth][s]	{makebox makebox }\\
+			\end{example}
+
+
+		
+		\end{frame}
+
+
+	% ------------------------------------------------------------------------------
+	%	framebox
+	% ------------------------------------------------------------------------------
+		\begin{frame}[t]{framebox}
+
+
+
+			\begin{block} {frame box}
+			\textbackslash framebox [width] [pos] \{text\}
+			\end{block}
+
+			\begin{block} {position}
+				\begin{description}
+				\item	[fboxsep]  the distance between the frame and the content.
+				\item	[fboxrule] the thickness of the rule.
+				\end{description}
+			\end{block}
+
+
+
+		
+		\end{frame}
+
+
+% 	================================================= chapter 	====================
+%		mini page
+%	-------------------------------------------------------------------------------
+		\begin{frame}[t]{minipage}
+
+
+			\begin{block} {minipage}
+			\end{block}
+
+		
+		\end{frame}
+
+
+
+
+
+	% ------------------------------------------------------------------------------
+	%	boxed mini page
+	% ------------------------------------------------------------------------------
+		
+		\begin{frame}[t]{boxedminipage}
+
+			\begin{block} {boxedminipage}
+			\end{block}
+
+			\begin{example}
+			\end{example}
+
+
+		
+		\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	%	==========================================================
+	%		참고 문헌
+	%	----------------------------------------------------------
+	%		참고 문헌
+	%	----------------------------------------------------------
+		\begin{frame}[t]{참고문헌}
+
+		
+		\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% ------------------------------------------------------------------------------
+% End document
+% ------------------------------------------------------------------------------
+\end{document}
+
+
